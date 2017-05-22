@@ -1,0 +1,175 @@
+[07-Dec-2016 10:08:58 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 5
+[07-Dec-2016 10:11:04 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 5
+[07-Dec-2016 10:11:05 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 5
+[07-Dec-2016 10:11:06 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 5
+[07-Dec-2016 10:11:07 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 5
+[07-Dec-2016 10:13:17 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/2005): Unknown MySQL server host 'localhost:3306' (0) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:13:17 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:13:17 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:14:01 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'cemiteri_test'@'localhost' to database 'cemiteri_startups' in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:14:01 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:14:01 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:14:04 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (42000/1044): Access denied for user 'cemiteri_test'@'localhost' to database 'cemiteri_startups' in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:14:04 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:14:04 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:14:56 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'cemiteri_test'@'localhost' (using password: YES) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:14:56 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:14:56 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:17:03 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'cemiteri_test'@'localhost' (using password: YES) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:17:03 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:17:03 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:17:05 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'cemiteri_test'@'localhost' (using password: YES) in /home/cemiteriodestart/public_html/test/configs/custom.php on line 10
+[07-Dec-2016 10:17:05 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/test/configs/custom.php on line 14
+[07-Dec-2016 10:17:05 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:17:29 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:33:40 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:33:41 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:19 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:20 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:21 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:22 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:22 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:34:26 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:29 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:30 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:36:32 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 23
+[07-Dec-2016 10:37:51 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 24
+[07-Dec-2016 10:37:53 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 24
+[07-Dec-2016 10:38:55 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:38:58 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:38:59 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 15
+[07-Dec-2016 10:39:44 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 10:43:28 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 10:44:03 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 25
+[07-Dec-2016 10:44:05 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 25
+[07-Dec-2016 10:44:41 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 25
+[07-Dec-2016 10:45:25 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 25
+[07-Dec-2016 10:45:27 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 25
+[07-Dec-2016 10:45:53 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:47:13 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:47:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:47:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:47:17 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:49:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:49:34 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:15 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:17 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:53:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:08 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:09 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:10 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:46 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:47 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:48 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:54:48 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 10:57:09 America/Sao_Paulo] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 10:57:13 America/Sao_Paulo] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:03:40 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:08:23 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:08:24 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:08:25 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:08:25 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:15 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:17 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:17 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:09:19 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:11:03 America/Sao_Paulo] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:11:07 America/Sao_Paulo] PHP Fatal error:  Cannot use object of type mysqli_result as array in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:12:39 America/Sao_Paulo] PHP Fatal error:  Call to undefined method mysqli_result::fetch() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:12:40 America/Sao_Paulo] PHP Fatal error:  Call to undefined method mysqli_result::fetch() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:12:56 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:13:29 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:13:30 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:13:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:13:32 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:13:33 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:14:43 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:14:45 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:14:46 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 28
+[07-Dec-2016 11:15:52 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:15:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:21:55 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:21:55 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:22:39 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:22:39 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:22:40 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:22:40 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:22:42 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:22:42 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:22:51 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:22:51 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:23:54 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:23:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:23:55 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:23:55 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:23:56 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:23:56 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:23:57 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:23:57 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:23:57 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:23:57 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:26:33 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:26:33 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:26:34 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:26:34 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:26:35 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:26:35 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:28:04 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:28:04 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:35 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:35 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:36 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:36 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:36 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:36 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:37 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:37 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:54 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:29:55 America/Sao_Paulo] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, object given in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 11:29:55 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:30:40 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:30:42 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:30:43 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 26
+[07-Dec-2016 11:31:29 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:30 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:31 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:41 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:31:48 America/Sao_Paulo] PHP Fatal error:  Cannot use [] for reading in /home/cemiteriodestart/public_html/test/configs/custom.php on line 19
+[07-Dec-2016 11:32:04 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 11:33:39 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 14:21:08 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 14:23:26 America/Sao_Paulo] PHP Fatal error:  Call to undefined function fetch_assoc() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 14:23:28 America/Sao_Paulo] PHP Fatal error:  Call to undefined function fetch_assoc() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 14:37:22 America/Sao_Paulo] PHP Fatal error:  Call to undefined function fetch_assoc() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 14:37:35 America/Sao_Paulo] PHP Fatal error:  Call to undefined function fetch_assoc() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 14:37:36 America/Sao_Paulo] PHP Fatal error:  Call to undefined function fetch_assoc() in /home/cemiteriodestart/public_html/test/configs/custom.php on line 16
+[07-Dec-2016 14:38:18 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 18:21:54 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 27
+[07-Dec-2016 19:55:28 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 30
+[07-Dec-2016 19:56:44 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 32
+[07-Dec-2016 20:00:16 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 34
+[07-Dec-2016 20:01:24 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 34
+[07-Dec-2016 20:21:57 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/test/configs/custom.php on line 34
+[07-Dec-2016 20:27:37 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/pagination.php on line 3
+[07-Dec-2016 20:30:36 America/Sao_Paulo] PHP Parse error:  syntax error, unexpected 'private' (T_PRIVATE) in /home/cemiteriodestart/public_html/test/configs/pagination.php on line 3
+[24-Feb-2017 10:13:41 America/Sao_Paulo] PHP Warning:  mysqli::query(): (HY000/2013): Lost connection to MySQL server during query in /home/cemiteriodestart/public_html/configs/connect.php on line 113
+[24-Feb-2017 10:13:41 America/Sao_Paulo] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/cemiteriodestart/public_html/configs/connect.php:113) in /home/cemiteriodestart/public_html/configs/pagination.php on line 2
+[07-Mar-2017 16:39:54 America/Sao_Paulo] PHP Fatal error:  Cannot redeclare class Database in /home/cemiteriodestart/public_html/configs/connect.php on line 9
+[17-Mar-2017 06:25:04 America/Sao_Paulo] PHP Warning:  mysqli::mysqli(): (HY000/2013): Lost connection to MySQL server at 'reading authorization packet', system error: 0 in /home/cemiteriodestart/public_html/configs/custom.php on line 10
+[17-Mar-2017 06:25:04 America/Sao_Paulo] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/cemiteriodestart/public_html/configs/custom.php on line 15
+[17-Mar-2017 06:25:04 America/Sao_Paulo] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/cemiteriodestart/public_html/configs/custom.php on line 18

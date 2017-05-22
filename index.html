@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>Cemitério de Startups</title>
+ 
+    <!-- include material design CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+ 
+    <!-- include material design icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+ 
+    <!-- include custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css" />
+ 
+</head>
+<body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('select').material_select();
+	
+});
+ 
+</script>
+  <nav >
+    <div class="nav-wrapper black">
+      <a href="#" class="brand-logo center">Cemitério de Startups</a>
+      
+    </div>
+  </nav>
+
+    <div class="container" ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl">
+    <div class="row">
+        <div class="col s12">
+            
+<br>
+<br>
+
+<!-- used for searching the current list -->
+<input type="text" ng-model="search" class="form-control" placeholder="Search Startup...">
+    <div class="col s12">
+
+          <div class="col s12 main">
+            <div class="row placeholders">
+              <div class="col s4" id="total" ng-init="totalStartup()">
+                <h4>{{num_rows}}</h4>
+                <h5>Total</h5>
+                <span class="text-muted">Total de startups cadastradas</span>
+              </div>
+              <div class="col s4" ng-init="moreProblem()">
+                <h4>{{more_problem}}</h4>
+                <h5>Motivo</h5>
+                <span class="text-muted">Maior motivo de morte de uma startup</span>
+              </div>
+              <div class="col s4" ng-init="moreCity()">
+                <h4>{{more_city}}</h4>
+                <h5>Cidade</h5>
+                <span class="text-muted">Cidade onde morrem mais startups</span>
+              </div>
+            </div>
+          </div>
+          <br>
+           <div class="col s12">
+               
+<a class="waves-effect waves-light margin-bottom-1em btn light-green darken-4"  data-target="modal-startup-form" modal ng-click="showCreateFormStartup()">Adicionar Startup</a>
+<a class="waves-effect waves-light margin-bottom-1em btn red darken-4" href="" ng-disabled="mySwitch" ng-click="showCreateFormStartup()" disabled>Reportar erro</a>
+           </div>
+<br>
+<table class="hoverable bordered">
+ 
+ <thead>
+                  <tr>
+                    <th class="visible-md visible-lg">#</th>
+                    <!-- <th>Inclusão</th> -->
+                    <th class="visible-xs visible-sm visible-md visible-lg">Startup</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Pitch</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Cidade</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">UF</th>
+                    <th class="visible-xs visible-sm visible-md visible-lg">Motivo</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Quote do empreendedor</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Born</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Fail</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Investimento</th>
+                    <th class="visible-xs visible-sm visible-md visible-lg">Fundador</th>
+                  </tr>
+                </thead>
+                <tbody ng-init="getAllStartup()">
+        <tr dir-paginate="d in names | filter:search | orderBy:sortKey:reverse | itemsPerPage:9" pagination-id="cemiterio">
+            <td data-title="#" class="visible-md visible-lg text-align-center">{{ d.id }}</td>
+            <td data-title="Startup" class="visible-xs visible-sm visible-md visible-lg text-align-center"><a href="" data-target="modal-startup-detail" modal ng-click="readOneStartup(d.id)"> {{d.name }}</a></td>
+            <td data-title="Pitch" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.pitch |strLimit:100 }}</td>
+            <td data-title="Cidade" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.city }}</td>
+            <td data-title="UF" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.state }}</td>
+            <td data-title="Motivo" class="text-align-center visible-xs visible-sm visible-md visible-lg">{{ d.name_problem }}</td>
+            <td data-title="Quote" class="hide-on-small-only hide-on-med-only hide-on-med-and-down"> {{ d.info |strLimit:100 }}</td>
+             <td data-title="Born" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_born }}</td>
+             <td data-title="Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
+             <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment }}</td>
+             <td data-title="Fundador" class="visible-xs visible-sm visible-md visible-lg text-align-center"> <a href="{{ d.url_founder }}">{{d.name_founder}}</a>     </td>
+        </tr>
+        
+    </tbody>    
+
+
+</table>
+<!-- angular pagination -->
+
+<dir-pagination-controls pagination-id="cemiterio" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/shared/dir_pagination.tpl.html"></dir-pagination-controls>
+
+    </div>
+
+
+
+
+
+<div id="modal-startup-detail" class="modal">
+<!--Modal Detail-->
+    <div class="modal-content">
+        <h4 id="modal-startup-title-detail">Detalhes Startup</h4>
+        <div class="row">
+            <div class="input-field col s8">
+                 <label for="name">Nome Startup</label>
+                 <br>
+            <p id="name">
+			{{name}}
+			</p>
+			</div>
+            <div class="input-field col s4">
+                 <label for="name_problem">Motivo</label>
+                 
+                 <br>
+            <p id="name_problem">
+			{{name_problem}}
+			</p>
+			</div>
+            <div class="input-field col s12">
+                
+                <label for="pitch">Pitch</label>
+				<br>
+                <p id="pitch">
+				{{pitch}}</p>
+            </div>
+            <div class="input-field col s6">
+                <label for="city">Cidade</label>
+                <br>
+                <p id="city">
+				{{city}}</p>
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="state">Estado</label>
+                <br>
+                <p id="state">
+				{{state}}</p>
+                
+            </div> 
+            <div class="input-field col s12">
+             <label for="info">Quote </label>
+			 <br>
+             <p id="info">
+			 {{info}}
+			 </p>
+            </div>
+
+            <div class="input-field col s6">
+                <label for="date_born">Born</label>
+                <br>
+                <p id="date_born">
+				{{date_born}}</p>
+            </div>
+            <div class="input-field col s6">
+                <label for="date_fail">Fail</label>
+            <br>
+            <p id="date_fail">
+			{{date_fail}}</p>
+                
+            </div>
+            <div class="input-field col s12">
+                <label for="investiment">Investimento</label>
+			<br>
+            <p id ="investiment">
+			{{investiment}}</p>
+				</div>
+            <div class="input-field col s12">
+                <label for="name_founder">Nome Fundador</label>
+				<br>
+                <p id="name_founder">
+				{{name_founder}}
+				</p>
+            </div>
+            <div class="input-field col s12">
+                <label for="url_founder">URL Fundador</label>
+				<br>
+                <p id="url_founder">
+				{{url_founder}}
+				</p>
+				</div>
+            <div class="input-field col s12">
+
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Close</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <!-- modal for for creating new startup -->
+<div id="modal-startup-form" class="modal">
+<form name="myForm">
+    <div class="modal-content">
+        <h4 id="modal-startup-title">Criar Nova Startup</h4> 
+        <div class="row">
+            <div class="input-field col s12">
+                <input ng-model="name" ng-minlength="2"
+       ng-maxlength="30" type="text" class="validate" id="form-name" placeholder="Digite o  nome ..." />
+                <label for="name">Nome Startup </label>
+            </div>
+            <div class="input-field col s12">
+                <textarea ng-required="true" ng-minlength="20"
+       ng-maxlength="250" ng-model="pitch" type="text" class="validate materialize-textarea" placeholder="Digite o pitch..."></textarea>
+                <label for="pitch">Pitch</label>
+            </div>
+			<div class="input-field col s12">
+                <label for="problem">Motivo</label>
+				<br><br>
+              <select class="browser-default" name="problem" id ="problem" ng-model="getAllProblem">
+			  <option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="{{d.id}}">{{d.name_problem}}</option>
+			</select>
+			
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="city">City</label>
+                <br>
+                <input ng-model="city" ng-required="true"
+       ng-minlength="3"
+       ng-maxlength="30" id = "city" type="text" class="validate" placeholder="Digite a cidade..."></input>
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="state">State</label>
+                <br>
+                <input ng-model="state" ng-required="true"
+       ng-minlength="2"
+       ng-maxlength="2" id = "state" type="text" class="validate" placeholder="Digite o estado..."></input>
+                
+            </div> 
+            <div class="input-field col s12">
+                <textarea ng-model="info" ng-required="true"
+       ng-minlength="20"
+       ng-maxlength="250" type="text" class="validate materialize-textarea" placeholder="Type Quote here..."></textarea>
+                <label for="info">Quote </label>
+            </div>
+
+            <div class="input-field col s6">
+                <label for="date_born">Born</label>
+                <br>
+                <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Born..."></input>
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="date_fail">Fail</label>
+                <br>
+                <input ng-model="date_fail"ng-required="true" id = "date_fail"  type="number" class="validate" placeholder="Digite o fail..."></input>
+                
+            </div>
+            <div class="input-field col s12">
+                <input ng-model="investiment" ng-required="true"
+       ng-minlength="1"
+        type="number" class="validate" id="investiment" placeholder="Type investiment here..." />
+                <label for="investiment">Investimento</label>
+            </div>
+            <div class="input-field col s12">
+                <input ng-required="true"
+       ng-minlength="3"
+       ng-maxlength="80" ng-model="name_founder" type="text" class="validate" id="name_founder" placeholder="Digite o nome do fundador..." />
+                <label for="name_founder">Nome do Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <input  ng-required="false"
+       ng-minlength="15"
+       ng-maxlength="30" ng-model="url_founder" type="url" class="validate" id="url_founder" placeholder="Digite a URL do fundador..." />
+                <label for="url_founder">URL Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Create</a>
+ 
+                <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
+ 
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Close</a>
+            </div>
+        </div>
+    </div>
+	</form>
+</div>
+<div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;height: 100%;opacity:0.65;width:100%; z-index: 19999;"> 
+                                <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+                                    <img class="waitingImage" src="/assets/img/loading.gif"  title="Aguarde..." />
+                                    <span class="waitingDescription">Carregando...</span>
+                                </div>
+                            </div>
+ 
+            <!-- data from database will be here -->
+ 
+        </div> <!-- end col s12 -->
+    </div> <!-- end row -->
+</div> <!-- end container -->
+</div>
+
+        <footer class="page-footer black">
+          <!--<div class="container">
+                <div class="row">
+          <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+            </div>
+        </div>-->
+
+          <div class="footer-copyright black">
+            <div class="container">
+            © 2017 - Made with ❤ by &nbsp; &nbsp;    <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%" /></a> ©
+             <br><br>
+			Developers: Michaell Reis Gasparini	& Vitor Savedra - Gama Experience #2	 
+          
+            </div>
+          </div>
+        </footer>
+ 
+
+<!-- page content and controls will be here -->
+
+
+ 
+<!-- include angular js -->
+<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+
+ <!-- include angular pagination -->
+<script src="assets/js/dirPagination.js"></script>
+
+<!-- include jquery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+ 
+<!-- material design js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+ 
+<!-- custom js -->
+<script type="text/javascript" src="assets/js/custom.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+
+<!-- app -->
+<script type="text/javascript" src="app/app.js"></script>
+ 
+ 
+
+
+</body>
+</html>

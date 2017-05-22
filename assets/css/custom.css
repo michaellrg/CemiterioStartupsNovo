@@ -1,0 +1,23 @@
+<!-- custom CSS -->
+<style>
+.width-30-pct{
+    width:30%;
+}
+ 
+.text-align-center{
+    text-align:center;
+}
+ 
+.margin-bottom-1em{
+    margin-bottom:1em;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color:    #33691e ; //background color of buttons. Blue by default
+  <!--border-color:         your color; // color or borders. Also blue by default-->
+  color:               #ffffff; // text color of buttons which is white by default
+  cursor:pointer;
+  z-index:2;
+}
+
+
+</style>
