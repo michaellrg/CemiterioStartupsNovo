@@ -277,5 +277,24 @@ function moreProblem(){
 
 
 }
+
+function totalInvestiment(){
+    // select total query
+    $query = "SELECT SUM(investiment) FROM ". $this->table_name;
+ 
+    // prepare query
+    $stmt = $this->conn->prepare($query);
+ 
+ 
+    // execute query
+    $stmt->execute();
+
+      // get retrieved row
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $this->investiment = $row['SUM(investiment)'];
+
+
+}
 }
 ?>

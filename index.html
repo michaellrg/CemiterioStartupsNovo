@@ -23,6 +23,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $('select').material_select();
+	 
 	
 });
  
@@ -34,7 +35,7 @@ $(document).ready(function() {
     </div>
   </nav>
 
-    <div class="container" ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl">
+    <div class="" ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl">
     <div class="row">
         <div class="col s12">
             
@@ -47,20 +48,25 @@ $(document).ready(function() {
 
           <div class="col s12 main">
             <div class="row placeholders">
-              <div class="col s4" id="total" ng-init="totalStartup()">
+              <div class="col s3" id="total" ng-init="totalStartup()">
                 <h4>{{num_rows}}</h4>
                 <h5>Total</h5>
                 <span class="text-muted">Total de startups cadastradas</span>
               </div>
-              <div class="col s4" ng-init="moreProblem()">
+              <div class="col s3" ng-init="moreProblem()">
                 <h4>{{more_problem}}</h4>
                 <h5>Motivo</h5>
                 <span class="text-muted">Maior motivo de morte de uma startup</span>
               </div>
-              <div class="col s4" ng-init="moreCity()">
+              <div class="col s3" ng-init="moreCity()">
                 <h4>{{more_city}}</h4>
                 <h5>Cidade</h5>
                 <span class="text-muted">Cidade onde morrem mais startups</span>
+              </div>
+			     <div class="col s3" ng-init="totalInvestiment()">
+                <h4>{{total_investiment| currency:"R$ "}}</h4>
+                <h5>Investimento</h5>
+                <span class="text-muted">Total perdido investido</span>
               </div>
             </div>
           </div>
@@ -83,8 +89,8 @@ $(document).ready(function() {
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">UF</th>
                     <th class="visible-xs visible-sm visible-md visible-lg">Motivo</th>
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Quote do empreendedor</th>
-                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Born</th>
-                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Fail</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Início</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Falha</th>
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Investimento</th>
                     <th class="visible-xs visible-sm visible-md visible-lg">Fundador</th>
                   </tr>
@@ -100,7 +106,7 @@ $(document).ready(function() {
             <td data-title="Quote" class="hide-on-small-only hide-on-med-only hide-on-med-and-down"> {{ d.info |strLimit:100 }}</td>
              <td data-title="Born" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_born }}</td>
              <td data-title="Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
-             <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment }}</td>
+             <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment | currency:"R$ "}}</td>
              <td data-title="Fundador" class="visible-xs visible-sm visible-md visible-lg text-align-center"> <a href="{{ d.url_founder }}">{{d.name_founder}}</a>     </td>
         </tr>
         
@@ -168,13 +174,13 @@ $(document).ready(function() {
             </div>
 
             <div class="input-field col s6">
-                <label for="date_born">Born</label>
+                <label for="date_born">Início</label>
                 <br>
                 <p id="date_born">
 				{{date_born}}</p>
             </div>
             <div class="input-field col s6">
-                <label for="date_fail">Fail</label>
+                <label for="date_fail">Falha</label>
             <br>
             <p id="date_fail">
 			{{date_fail}}</p>
@@ -202,7 +208,7 @@ $(document).ready(function() {
 				</div>
             <div class="input-field col s12">
 
-                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Close</a>
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
             </div>
         </div>
     </div>
@@ -235,7 +241,7 @@ $(document).ready(function() {
                 
             </div>
             <div class="input-field col s6">
-                <label for="city">City</label>
+                <label for="city">Cidade</label>
                 <br>
                 <input ng-model="city" ng-required="true"
        ng-minlength="3"
@@ -243,7 +249,7 @@ $(document).ready(function() {
                 
             </div>
             <div class="input-field col s6">
-                <label for="state">State</label>
+                <label for="state">Estado</label>
                 <br>
                 <input ng-model="state" ng-required="true"
        ng-minlength="2"
@@ -253,26 +259,26 @@ $(document).ready(function() {
             <div class="input-field col s12">
                 <textarea ng-model="info" ng-required="true"
        ng-minlength="20"
-       ng-maxlength="250" type="text" class="validate materialize-textarea" placeholder="Type Quote here..."></textarea>
+       ng-maxlength="250" type="text" class="validate materialize-textarea" placeholder="Digite o Quote..."></textarea>
                 <label for="info">Quote </label>
             </div>
 
             <div class="input-field col s6">
-                <label for="date_born">Born</label>
+                <label for="date_born">Nascimento</label>
                 <br>
-                <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Born..."></input>
+                <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Nascimento..."></input>
                 
             </div>
             <div class="input-field col s6">
-                <label for="date_fail">Fail</label>
+                <label for="date_fail">Falência</label>
                 <br>
-                <input ng-model="date_fail"ng-required="true" id = "date_fail"  type="number" class="validate" placeholder="Digite o fail..."></input>
+                <input ng-model="date_fail"ng-required="true" id = "date_fail"  type="number" class="validate" placeholder="Digite a falência..."></input>
                 
             </div>
             <div class="input-field col s12">
                 <input ng-model="investiment" ng-required="true"
        ng-minlength="1"
-        type="number" class="validate" id="investiment" placeholder="Type investiment here..." />
+        type="number" class="validate" id="investiment" placeholder="Digite o investimento..." />
                 <label for="investiment">Investimento</label>
             </div>
             <div class="input-field col s12">
@@ -288,22 +294,17 @@ $(document).ready(function() {
                 <label for="url_founder">URL Fundador</label>
             </div>
             <div class="input-field col s12">
-                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Create</a>
+                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
  
                 <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
  
-                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Close</a>
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
             </div>
         </div>
     </div>
 	</form>
 </div>
-<div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;height: 100%;opacity:0.65;width:100%; z-index: 19999;"> 
-                                <div class="waitingHolder" style="top: 74.2px; width: 91px;">
-                                    <img class="waitingImage" src="/assets/img/loading.gif"  title="Aguarde..." />
-                                    <span class="waitingDescription">Carregando...</span>
-                                </div>
-                            </div>
+
  
             <!-- data from database will be here -->
  
@@ -339,7 +340,7 @@ $(document).ready(function() {
  
 <!-- include angular js -->
 <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
-
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
  <!-- include angular pagination -->
 <script src="assets/js/dirPagination.js"></script>
 

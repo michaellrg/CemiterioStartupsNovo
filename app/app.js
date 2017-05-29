@@ -440,6 +440,15 @@ $scope.moreCity = function(id){
     });
 }
 
-
+$scope.totalInvestiment= function(id){
+ 
+    
+   $http({
+        method: 'GET',
+        url: 'api/startup/total-investiment.php'
+    }).then(function successCallback(response) {
+        $scope.total_investiment= response.data[0]["total_investiment"];
+    });
+}
 
 });
