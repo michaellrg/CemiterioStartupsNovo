@@ -11,7 +11,14 @@
   <link href="../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <style>
-  
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+ background-color:    #26a69a ; //background color of buttons. Blue by default
+<!--border-color:         your color; // color or borders. Also blue by default-->
+  color:               #ffffff; // text color of buttons which is white by default
+  cursor:pointer;
+  z-index:2;
+}
+
   .dark{
   
   background:#1f0242;
