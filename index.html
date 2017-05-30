@@ -1,108 +1,238 @@
-<!DOCTYPE html>
-<html>
+
+<html lang="pt-br">
 <head>
- 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <title>Cemitério de Startups</title>
-    
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>Cemitério de Startups</title>
 
-    
-    <!-- include angular js -->
-    <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
-    <!-- include angular pagination -->
-    <script src="assets/js/dirPagination.js"></script>
-
-    <!-- include jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    
-    <!-- material design js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
-
-    <!-- app -->
-    <script type="text/javascript" src="app/app.js"></script>
-    
-    
-
-    <!-- include material design CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
- 
-    <!-- include material design icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
- 
-    <!-- include custom CSS -->
-    <link rel="stylesheet" href="assets/css/custom.css" />
- 
+  <!-- CSS  -->
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+  
+  .dark{
+  
+  background:#1f0242;
+  
+  }
+  
+  .brand-logo{
+  
+	margin-top:6px;
+	width:140px;
+  
+  }
+  
+  .icon-block .material-icons {
+    font-size: inherit;
+    color: #1f0242;
+}
+  
+  </style>
 </head>
-<body>
+<body ng-app="myApp"  ng-controller="mainCtrl">
+  <nav class="dark" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="assets/img/logo.png" style="width:100%;"></img></a>
+     <!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $('select').material_select();
-	 
-	
-});
- 
-</script>
-  <nav >
-    <div class="nav-wrapper black">
-      <a href="#" class="brand-logo center">Cemitério de Startups</a>
-      
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
     </div>
   </nav>
 
-    <div class="" ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl">
-    <div class="row">
-        <div class="col s12">
-            
-<br>
-<br>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Cemitério de Startups</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Descubra porque tantas startups falharam e onde falharam!</h5>
+        </div>
+        <div class="row center">
+          <a href="#container" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Vamos Começar!</a>
+        </div>
+        <br><br>
 
-<!-- used for searching the current list -->
-<input type="text" ng-model="search" class="form-control" placeholder="Buscar Startup...">
-    <div class="col s12">
+      </div>
+    </div>
+    <div class="parallax"><img src="../assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
 
-          <div class="col s12 main">
-            <div class="row placeholders">
-              <div class="col s3" id="total" ng-init="totalStartup()">
-                <h4>{{num_rows}}</h4>
-                <h5>Total</h5>
-                <span class="text-muted">Total de startups cadastradas</span>
-              </div>
-              <div class="col s3" ng-init="moreProblem()">
-                <h4>{{more_problem}}</h4>
-                <h5>Motivo</h5>
-                <span class="text-muted">Maior motivo de morte de uma startup</span>
-              </div>
-              <div class="col s3" ng-init="moreCity()">
-                <h4>{{more_city}}</h4>
-                <h5>Cidade</h5>
-                <span class="text-muted">Cidade onde morrem mais startups</span>
-              </div>
-			     <div class="col s3" ng-init="totalInvestiment()">
-                <h4>{{total_investiment| currency:"R$ "}}</h4>
-                <h5>Investimento</h5>
-                <span class="text-muted">Total perdido investido</span>
-              </div>
-            </div>
+
+  <div class="container" id="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row" style="text-align: center;">
+        <div class="col s12 m3" ng-init="totalStartup()">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">{{num_rows}}</h5>
+
+            <p class="light">Total de Startups Cadastradas</p>
           </div>
-          <br>
-           <div class="col s12">
+        </div>
+
+        <div class="col s12 m3" ng-init="moreProblem()">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">{{more_problem}}</h5>
+
+            <p class="light">Maior motivo de morte de uma startup</p>
+          </div>
+        </div>
+
+        <div class="col s12 m3" ng-init="moreCity()">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">room</i></h2>
+            <h5 class="center">{{more_city}}</h5>
+
+            <p class="light">Cidade onde morrem mais startups</p>
+          </div>
+        </div>
+		
+		 <div class="col s12 m3" ng-init="totalInvestiment()">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">trending_up</i></h2>
+            <h5 class="center">{{total_investiment| currency:"R$ "}}</h5>
+
+            <p class="light">Total perdido em Investimento</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">Procure por uma Startup logo abaixo!<br><b>Ou se você conhece uma que faliu e não se encontra aqui, adicione</b></h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="../assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+           <div class="row">
+			<form class="col s12">
+			  <div class="row">
+				<div class="input-field col s12">
+				  <input id="search" ng-model="search" type="text" class="search">
+				  <label for="search" data-error="wrong" data-success="right">Procurar Startup</label>
+				</div>
+			  </div>
+			</form>
+		  </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <div  ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl" class="col s12 center" style="margin-bottom: 3%;">
                
-<a class="waves-effect waves-light margin-bottom-1em btn light-green darken-4"  data-target="modal-startup-form" modal ng-click="showCreateFormStartup()">Adicionar Startup</a>
-<a class="waves-effect waves-light margin-bottom-1em btn red darken-4" href="" ng-disabled="mySwitch" ng-click="showCreateFormStartup()" disabled>Reportar erro</a>
-           </div>
-<br>
-<table class="hoverable bordered">
+<a class="btn-large waves-effect waves-light teal lighten-1" href="#addStartup" >Adicionar Startup</a>
+<a class="btn-large waves-effect waves-light teal lighten-1 " href=""  disabled="disabled">Reportar erro</a>
+  </div>
+  
+  <div id="addStartup" ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl" class="modal">
+    <div class="modal-content">
+        <h4 id="modal-startup-title">Adicionar nova Startup</h4> 
+        <div class="row">
+            <div class="input-field col s12">
+                <input ng-model="name" ng-minlength="2" ng-maxlength="30" type="text" class="validate ng-pristine ng-valid ng-valid-maxlength ng-valid-minlength" id="form-name" placeholder="Digite o  nome ...">
+                <label for="name" class="active">Nome Startup </label>
+            </div>
+            <div class="input-field col s12">
+                <textarea ng-required="true" ng-minlength="20" ng-maxlength="250" ng-model="pitch" type="text" class="validate materialize-textarea ng-pristine ng-valid-maxlength ng-valid-minlength ng-invalid ng-invalid-required" placeholder="Digite o pitch..." required="required"></textarea>
+                <label for="pitch" class="active">Pitch</label>
+            </div>
+			<div class="input-field col s12">
+                <label for="problem">Motivo</label>
+				<br><br>
+              <select class="browser-default ng-pristine ng-valid" name="problem" id="problem" ng-model="getAllProblem"><option value="? function:function (){
+    $http({
+        method: 'GET',
+        url: 'api/problem/read.php'
+    }).then(function successCallback(response) {
+        $scope.names = response.data.records;
+    });
+} ?"></option>
+			  <!-- ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} --><option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="10" class="ng-scope ng-binding">Business Model</option><!-- end ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} --><option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="36" class="ng-scope ng-binding">Funding</option><!-- end ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} --><option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="7" class="ng-scope ng-binding">Idea</option><!-- end ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} --><option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="5" class="ng-scope ng-binding">Team</option><!-- end ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} --><option ng-repeat="d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'}" value="1" class="ng-scope ng-binding">Timing</option><!-- end ngRepeat: d in names | unique:'name_problem' | orderBy:'name_problem'|  filter:{name_problem:'!N/A'} -->
+			</select>
+			
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="city" class="active">Cidade</label>
+                <br>
+                <input ng-model="city" ng-required="true" ng-minlength="3" ng-maxlength="30" id="city" type="text" class="validate ng-pristine ng-valid-maxlength ng-valid-minlength ng-invalid ng-invalid-required" placeholder="Digite a cidade..." required="required">
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="state" class="active">Estado</label>
+                <br>
+                <input ng-model="state" ng-required="true" ng-minlength="2" ng-maxlength="2" id="state" type="text" class="validate ng-pristine ng-valid-maxlength ng-valid-minlength ng-invalid ng-invalid-required" placeholder="Digite o estado..." required="required">
+                
+            </div> 
+            <div class="input-field col s12">
+                <textarea ng-model="info" ng-required="true" ng-minlength="20" ng-maxlength="250" type="text" class="validate materialize-textarea ng-pristine ng-valid-minlength ng-invalid ng-invalid-required ng-valid-maxlength" placeholder="Digite o Quote..." required="required"></textarea>
+                <label for="info" class="active">Quote </label>
+            </div>
+
+            <div class="input-field col s6">
+                <label for="date_born" class="active">Nascimento</label>
+                <br>
+                <input ng-model="date_born" ng-required="true" id="date_born" type="number" class="validate ng-pristine ng-invalid ng-invalid-required ng-valid-number" placeholder="Digite o Nascimento..." required="required">
+                
+            </div>
+            <div class="input-field col s6">
+                <label for="date_fail" class="active">Falência</label>
+                <br>
+                <input ng-model="date_fail" ng-required="true" id="date_fail" type="number" class="validate ng-pristine ng-invalid ng-invalid-required ng-valid-number" placeholder="Digite a falência..." required="required">
+                
+            </div>
+            <div class="input-field col s12">
+                <input ng-model="investiment" ng-required="true" ng-minlength="1" type="number" class="validate ng-pristine ng-invalid ng-invalid-required ng-valid-minlength ng-valid-number" id="investiment" placeholder="Digite o investimento..." required="required">
+                <label for="investiment" class="active">Investimento</label>
+            </div>
+            <div class="input-field col s12">
+                <input ng-required="true" ng-minlength="3" ng-maxlength="80" ng-model="name_founder" type="text" class="validate ng-pristine ng-valid-maxlength ng-valid-minlength ng-invalid ng-invalid-required" id="name_founder" placeholder="Digite o nome do fundador..." required="required">
+                <label for="name_founder" class="active">Nome do Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <input ng-required="false" ng-minlength="15" ng-maxlength="30" ng-model="url_founder" type="url" class="validate ng-pristine ng-valid-url ng-valid-minlength ng-valid-required ng-valid ng-valid-maxlength" id="url_founder" placeholder="Digite a URL do fundador...">
+                <label for="url_founder" class="active">URL Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid" class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()" disabled="disabled"><i class="material-icons left">add</i>Criar</a>
+ 
+                <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
+ 
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+  
+  <div ng-app="myApp"  ng-controller="mainCtrl" class="row">
+ <table class="hoverable bordered">
  
  <thead>
                   <tr>
@@ -114,8 +244,8 @@ $(document).ready(function() {
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">UF</th>
                     <th class="visible-xs visible-sm visible-md visible-lg">Motivo</th>
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Quote do empreendedor</th>
-                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Início</th>
-                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Falha</th>
+                   
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Data do Fail</th>
                     <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Investimento</th>
                     <th class="visible-xs visible-sm visible-md visible-lg">Fundador</th>
                   </tr>
@@ -129,8 +259,8 @@ $(document).ready(function() {
             <td data-title="UF" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.state }}</td>
             <td data-title="Motivo" class="text-align-center visible-xs visible-sm visible-md visible-lg">{{ d.name_problem }}</td>
             <td data-title="Quote" class="hide-on-small-only hide-on-med-only hide-on-med-and-down"> {{ d.info |strLimit:100 }}</td>
-             <td data-title="Born" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_born }}</td>
-             <td data-title="Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
+            
+             <td data-title="Data do Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
              <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment | currency:"R$ "}}</td>
              <td data-title="Fundador" class="visible-xs visible-sm visible-md visible-lg text-align-center"> <a href="{{ d.url_founder }}">{{d.name_founder}}</a>     </td>
         </tr>
@@ -142,14 +272,7 @@ $(document).ready(function() {
 <!-- angular pagination -->
 
 <dir-pagination-controls pagination-id="cemiterio" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/shared/dir_pagination.tpl.html"></dir-pagination-controls>
-
-    </div>
-
-
-
-
-
-<div id="modal-startup-detail" class="modal">
+ <div id="modal-startup-detail" ng-app="myApp"  ng-controller="mainCtrl" class="modal">
 <!--Modal Detail-->
     <div class="modal-content">
         <h4 id="modal-startup-title-detail">Detalhes Startup</h4>
@@ -199,13 +322,13 @@ $(document).ready(function() {
             </div>
 
             <div class="input-field col s6">
-                <label for="date_born">Início</label>
+                <label for="date_born">Data de Início</label>
                 <br>
                 <p id="date_born">
 				{{date_born}}</p>
             </div>
             <div class="input-field col s6">
-                <label for="date_fail">Falha</label>
+                <label for="date_fail">Data do Fail</label>
             <br>
             <p id="date_fail">
 			{{date_fail}}</p>
@@ -215,7 +338,7 @@ $(document).ready(function() {
                 <label for="investiment">Investimento</label>
 			<br>
             <p id ="investiment">
-			{{investiment | currency:"R$ "}}</p>
+			{{investiment| currency:"R$ "}}</p>
 				</div>
             <div class="input-field col s12">
                 <label for="name_founder">Nome Fundador</label>
@@ -240,7 +363,7 @@ $(document).ready(function() {
 </div>
 
 
-            <!-- modal for for creating new startup -->
+           <!-- modal for for creating new startup -->
 <div id="modal-startup-form" class="modal">
 <form name="myForm">
     <div class="modal-content">
@@ -290,7 +413,6 @@ $(document).ready(function() {
 
             <div class="input-field col s6">
                 <label for="date_born">Nascimento</label>
-
                 <br>
                 <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Nascimento..."></input>
                 
@@ -330,39 +452,58 @@ $(document).ready(function() {
     </div>
 	</form>
 </div>
+  
+  </div>
+  
 
- 
-            <!-- data from database will be here -->
- 
-        </div> <!-- end col s12 -->
-    </div> <!-- end row -->
-</div> <!-- end container -->
-</div>
 
-        <footer class="page-footer black">
-          <!--<div class="container">
-                <div class="row">
-          <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-            </div>
-        </div>-->
 
-          <div class="footer-copyright black">
-            <div class="container">
-            © 2017 - Made with ❤ by &nbsp; &nbsp;    <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%" /></a> ©
-             <br><br>
-			Developers: Michaell Reis Gasparini	& Vitor Savedra - Gama Experience #2	 
           
-            </div>
-          </div>
-        </footer>
+
+  
+
+  <footer class="page-footer teal">
+    
+    <div class="footer-copyright">
+      <div class="container">
+       © 2017 - Made with ❤ by &nbsp; &nbsp;    <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%"></a> ©
+	    <br><br>
+			Developers: Michaell Reis Gasparini, Vitor Savedra, Victor Angelo Marcorin - Gama Experience #2<br>
+			Designer: Bruno A L Mescouto (BARBA) - Gama Experience #4	 
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+<!-- include angular js -->
+<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
+ <!-- include angular pagination -->
+<script src="../assets/js/dirPagination.js"></script>
+
+<!-- include jquery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
  
+<!-- material design js -->
+<script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+ 
+<!-- custom js -->
+<script type="text/javascript" src="../assets/js/custom.js"></script>
 
-<!-- page content and controls will be here -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
 
-
-
-</body>
+<!-- app -->
+<script type="text/javascript" src="/app/app.js"></script>
+  <script src="/assets/js/init.js"></script>
+  <script>
+  
+	$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  
+  </script>
+  </body>
 </html>

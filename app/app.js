@@ -205,7 +205,7 @@ $scope.deleteProblem = function(id){
 }
 
 $scope.showDetailsStartup = function(){
-      $('#modal-startup-title-detail').text("Startup Details");
+      $('#modal-startup-title-detail').text("Detalhes da Startup");
     
 }
 
@@ -297,7 +297,7 @@ $scope.createStartup = function(){
 $scope.readOneStartup = function(id){
  
     // change modal title
-    $('#modal-startup-title-detail').text("Startup details");
+    $('#modal-startup-title-detail').text("Detalhes da Startup");
  
     // show udpate problem button
    // $('#btn-update-startup').show();
