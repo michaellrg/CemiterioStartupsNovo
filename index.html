@@ -7,7 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
  
     <title>Cemitério de Startups</title>
- 
+    
+
+    
+    <!-- include angular js -->
+    <script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
+    <!-- include angular pagination -->
+    <script src="assets/js/dirPagination.js"></script>
+
+    <!-- include jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    <!-- material design js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/custom.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+
+    <!-- app -->
+    <script type="text/javascript" src="app/app.js"></script>
+    
+    
+
     <!-- include material design CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
  
@@ -43,7 +68,7 @@ $(document).ready(function() {
 <br>
 
 <!-- used for searching the current list -->
-<input type="text" ng-model="search" class="form-control" placeholder="Search Startup...">
+<input type="text" ng-model="search" class="form-control" placeholder="Buscar Startup...">
     <div class="col s12">
 
           <div class="col s12 main">
@@ -96,7 +121,7 @@ $(document).ready(function() {
                   </tr>
                 </thead>
                 <tbody ng-init="getAllStartup()">
-        <tr dir-paginate="d in names | filter:search | orderBy:sortKey:reverse | itemsPerPage:9" pagination-id="cemiterio">
+        <tr dir-paginate="d in names | filter:search | orderBy:sortKey:reverse | itemsPerPage:20" pagination-id="cemiterio">
             <td data-title="#" class="visible-md visible-lg text-align-center">{{ d.id }}</td>
             <td data-title="Startup" class="visible-xs visible-sm visible-md visible-lg text-align-center"><a href="" data-target="modal-startup-detail" modal ng-click="readOneStartup(d.id)"> {{d.name }}</a></td>
             <td data-title="Pitch" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.pitch |strLimit:100 }}</td>
@@ -190,7 +215,7 @@ $(document).ready(function() {
                 <label for="investiment">Investimento</label>
 			<br>
             <p id ="investiment">
-			{{investiment}}</p>
+			{{investiment | currency:"R$ "}}</p>
 				</div>
             <div class="input-field col s12">
                 <label for="name_founder">Nome Fundador</label>
@@ -265,6 +290,7 @@ $(document).ready(function() {
 
             <div class="input-field col s6">
                 <label for="date_born">Nascimento</label>
+
                 <br>
                 <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Nascimento..."></input>
                 
@@ -336,30 +362,6 @@ $(document).ready(function() {
 
 <!-- page content and controls will be here -->
 
-
- 
-<!-- include angular js -->
-<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
- <!-- include angular pagination -->
-<script src="assets/js/dirPagination.js"></script>
-
-<!-- include jquery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
- 
-<!-- material design js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
- 
-<!-- custom js -->
-<script type="text/javascript" src="assets/js/custom.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
-
-<!-- app -->
-<script type="text/javascript" src="app/app.js"></script>
- 
- 
 
 
 </body>

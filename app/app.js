@@ -219,7 +219,7 @@ $scope.showCreateFormStartup = function(){
     $scope.clearFormStartup();
  
     // change modal title
-    $('#modal-startup-title').text("Create New Startup");
+    $('#modal-startup-title').text("Adicionar Startup");
  
     // hide update startup button
     $('#btn-update-startup').hide();
