@@ -36,7 +36,7 @@ if($num>0){
  
         $data .= '{';
             $data .= '"id":'  . $id . ',';
-            $data .= '"name":'   .  json_encode(utf8_encode($name_problem));
+            $data .= '"nproblem":'   .  json_encode(utf8_encode($name_problem));
             $data .= '}';
  
         $data .= $x<$num ? ',' : '';

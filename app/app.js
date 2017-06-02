@@ -11,50 +11,7 @@ var app = angular.module('myApp', ['angularUtils.directives.dirPagination', 'ui.
    };
 }]);
 
- app.filter('unique', function() {
-
-  // Take in the collection and which field
-  //   should be unique
-  // We assume an array of objects here
-  // NOTE: We are skipping any object which
-  //   contains a duplicated value for that
-  //   particular key.  Make sure this is what
-  //   you want!
-  return function (arr, targetField) {
-
-    var values = [],
-        i, 
-        unique,
-        l = arr.length, 
-        results = [],
-        obj;
-
-    // Iterate over all objects in the array
-    // and collect all unique values
-    for( i = 0; i < arr.length; i++ ) {
-
-      obj = arr[i];
-
-      // check for uniqueness
-      unique = true;
-      for( v = 0; v < values.length; v++ ){
-        if( obj[targetField] == values[v] ){
-          unique = false;
-        }
-      }
-
-      // If this is indeed unique, add its
-      //   value to our values and push
-      //   it onto the returned array
-      if( unique ){
-        values.push( obj[targetField] );
-        results.push( obj );
-      }
-
-    }
-    return results;
-  };
-});
+ 
 app.controller('mainCtrl', function($scope, $http) {
  
  
@@ -147,7 +104,7 @@ $scope.getAllProblem = function(){
         method: 'GET',
         url: 'api/problem/read.php'
     }).then(function successCallback(response) {
-        $scope.names = response.data.records;
+        $scope.problems = response.data.records;
     });
 }
 
@@ -205,7 +162,7 @@ $scope.deleteProblem = function(id){
 }
 
 $scope.showDetailsStartup = function(){
-      $('#modal-startup-title-detail').text("Detalhes da Startup");
+      $('#modal-startup-title-detail').text("Startup Details");
     
 }
 
@@ -219,7 +176,7 @@ $scope.showCreateFormStartup = function(){
     $scope.clearFormStartup();
  
     // change modal title
-    $('#modal-startup-title').text("Adicionar Startup");
+    $('#modal-startup-title').text("Create New Startup");
  
     // hide update startup button
     $('#btn-update-startup').hide();
@@ -297,7 +254,7 @@ $scope.createStartup = function(){
 $scope.readOneStartup = function(id){
  
     // change modal title
-    $('#modal-startup-title-detail').text("Detalhes da Startup");
+    $('#modal-startup-title-detail').text("Startup details");
  
     // show udpate problem button
    // $('#btn-update-startup').show();
