@@ -290,7 +290,7 @@
 			<div class="input-field col s12">
                 <label for="problem">Motivo</label>
 				<br><br>
-              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" required>
+              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" ng-required="true">
 			  <option ng-repeat="d in problems | orderBy:'nproblem'|  filter:{nproblem:'!N/A'}" value="{{d.id}}">{{d.nproblem}}</option>
 			</select>
 			
@@ -299,7 +299,7 @@
             <div class="input-field col s6">
                 <label for="dcity">Cidade</label>
                 <br><br>
-                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" required>
+                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" ng-required="true">
 			 
 			</select>
                 
@@ -307,7 +307,7 @@
             <div class="input-field col s6">
                 <label for="stateUF">Estado</label>
                 <br><br>
-                <select class="browser-default" name="state" id ="stateUF" ng-model="state" required>
+                <select class="browser-default" name="state" id ="stateUF" ng-model="state" ng-required="true">
 			 
 			</select>
                 
