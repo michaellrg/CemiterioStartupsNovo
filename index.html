@@ -40,6 +40,22 @@
     font-size: inherit;
     color: #1f0242;
 }
+
+.text-field{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
   
   </style>
 </head>
@@ -257,7 +273,7 @@
 
 
 <div id="modal-startup-form" ng-app="myApp"  ng-controller="mainCtrl" class="modal">
-<form name="myForm">
+<form name="myForm" novalidate>
     <div class="modal-content">
         <h4 id="modal-startup-title">Criar Nova Startup</h4> 
         <div class="row">
@@ -305,15 +321,15 @@
             </div>
 
             <div class="input-field col s6">
-                <label for="date_born">Nascimento</label>
-                <br>
-                <input ng-model="date_born" ng-required="true" id = "date_born" type="number" class="validate" placeholder="Digite o Nascimento..."></input>
+                <label for="date_born">Data de Início</label>
+                <br><br>
+                <input ng-model="date_born" ng-required="true" id = "date_bornN" ng-minlength="7" ng-maxlength="7" type="string" class="js-mask-mesano text-field" placeholder="Digite o Nascimento..." ></input>
                 
             </div>
             <div class="input-field col s6">
-                <label for="date_fail">Falência</label>
-                <br>
-                <input ng-model="date_fail"ng-required="true" id = "date_fail"  type="number" class="validate" placeholder="Digite a falência..."></input>
+                <label for="date_fail">Data de Fail</label>
+                <br><br>
+                <input ng-model="date_fail"ng-required="true" id = "date_failN" ng-minlength="7" ng-maxlength="7" type="string" class="js-mask-mesano text-field" placeholder="Digite a falência..." ></input>
                 
             </div>
             <div class="input-field col s12">
@@ -335,7 +351,7 @@
                 <label for="url_founder">URL Fundador</label>
             </div>
             <div class="input-field col s12">
-                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
+                <a id="btn-create-startup" ng-disabled="myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
  
                 <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
  
@@ -430,10 +446,13 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
-
+<script type="text/javascript" src="../assets/js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="../assets/js/maskedinput-binder.js"></script>
+<script type="text/javascript" src="../assets/js/masks.js"></script>
+ <script type="text/javascript" src="../assets/js/validadores.js"></script>
 <!-- app -->
 <script type="text/javascript" src="/app/app.js"></script>
-  <script src="/assets/js/init.js"></script>
+  <script src="../assets/js/init.js"></script>
   <script>
   
 	$(document).ready(function(){
