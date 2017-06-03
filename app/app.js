@@ -22,7 +22,7 @@ $scope.showCreateFormProblem = function(){
     $scope.clearFormProblem();
  
     // change modal title
-    $('#modal-problem-title').text("Create New Problem");
+    $('#modal-problem-title').text("Cadastrar um problema");
  
     // hide update problem button
     $('#btn-update-problem').hide();
@@ -70,7 +70,7 @@ $scope.createProblem = function(){
 $scope.readOneProblem = function(id){
  
     // change modal title
-    $('#modal-problem-title').text("Edit Problem");
+    $('#modal-problem-title').text("Editar Problema");
  
     // show udpate problem button
     $('#btn-update-problem').show();
@@ -94,7 +94,7 @@ $scope.readOneProblem = function(id){
         $('#modal-problem-form').modal('open');
     })
     .error(function(data, status, headers, config){
-        Materialize.toast('Unable to retrieve record.', 4000);
+        Materialize.toast('Ocorreu um erro no cadastro.', 4000);
     });
 }
 
@@ -142,7 +142,7 @@ $scope.updateProblems = function(){
 $scope.deleteProblem = function(id){
  
     // ask the user if he is sure to delete the record
-    if(confirm("Are you sure?")){
+    if(confirm("Você tem certeza?")){
  
         $http({
             method: 'POST',
@@ -162,7 +162,7 @@ $scope.deleteProblem = function(id){
 }
 
 $scope.showDetailsStartup = function(){
-      $('#modal-startup-title-detail').text("Startup Details");
+      $('#modal-startup-title-detail').text("Detalhes da Startup");
     
 }
 
@@ -176,7 +176,7 @@ $scope.showCreateFormStartup = function(){
     $scope.clearFormStartup();
  
     // change modal title
-    $('#modal-startup-title').text("Create New Startup");
+    $('#modal-startup-title').text("Cadastrar nova Startup");
  
     // hide update startup button
     $('#btn-update-startup').hide();
@@ -254,7 +254,7 @@ $scope.createStartup = function(){
 $scope.readOneStartup = function(id){
  
     // change modal title
-    $('#modal-startup-title-detail').text("Startup details");
+    $('#modal-startup-title-detail').text("Detalhes da Startup");
  
     // show udpate problem button
    // $('#btn-update-startup').show();
@@ -289,7 +289,7 @@ $scope.readOneStartup = function(id){
         $('#modal-startup-detail').modal('open');
     })
     .error(function(data, status, headers, config){
-        Materialize.toast('Unable to retrieve record.', 4000);
+        Materialize.toast('Ocorreu um erro.', 4000);
     });
 }
 
@@ -344,7 +344,7 @@ $scope.updateStartup = function(){
 $scope.deleteStartup = function(id){
  
     // ask the user if he is sure to delete the record
-    if(confirm("Are you sure?")){
+    if(confirm("Você tem certeza?")){
  
         $http({
             method: 'POST',
@@ -407,5 +407,7 @@ $scope.totalInvestiment= function(id){
         $scope.total_investiment= response.data[0]["total_investiment"];
     });
 }
+
+
 
 });

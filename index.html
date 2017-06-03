@@ -16,9 +16,9 @@
 </script>
   <style>
   .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
- background-color:    #26a69a ; //background color of buttons. Blue by default
-<!--border-color:         your color; // color or borders. Also blue by default-->
-  color:               #ffffff; // text color of buttons which is white by default
+ background-color:    #26a69a ; <!--background color of buttons. Blue by default-->
+<!--border-color:         your color;  color or borders. Also blue by default-->
+  color:               #ffffff; <!--  text color of buttons which is white by default-->
   cursor:pointer;
   z-index:2;
 }
@@ -274,26 +274,27 @@
 			<div class="input-field col s12">
                 <label for="problem">Motivo</label>
 				<br><br>
-              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()">
+              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" required>
 			  <option ng-repeat="d in problems | orderBy:'nproblem'|  filter:{nproblem:'!N/A'}" value="{{d.id}}">{{d.nproblem}}</option>
 			</select>
 			
                 
             </div>
             <div class="input-field col s6">
-                <label for="city">Cidade</label>
-                <br>
-                <input ng-model="city" ng-required="true"
-       ng-minlength="3"
-       ng-maxlength="30" id = "city" type="text" class="validate" placeholder="Digite a cidade..."></input>
+                <label for="dcity">Cidade</label>
+                <br><br>
+                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" required>
+			 
+			</select>
                 
             </div>
             <div class="input-field col s6">
-                <label for="state">Estado</label>
-                <br>
-                <input ng-model="state" ng-required="true"
-       ng-minlength="2"
-       ng-maxlength="2" id = "state" type="text" class="validate" placeholder="Digite o estado..."></input>
+                <label for="stateUF">Estado</label>
+                <br><br>
+                <select class="browser-default" name="state" id ="stateUF" ng-model="state" required>
+			 
+			</select>
+                
                 
             </div> 
             <div class="input-field col s12">
@@ -401,7 +402,7 @@
       <div class="container">
        © 2017 - Made with ❤ by &nbsp; &nbsp;    <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%"></a> ©
 	    <br><br>
-			Developers: Michaell Reis Gasparini, Vitor Savedra, Victor Angelo Marcorin - Gama Experience #2<br>
+			Developers: Bruno Andrade Santos, Michaell Reis Gasparini,Victor Angelo Marcorin, Vitor Savedra  - Gama Experience #2<br>
 			Designer: Bruno A L Mescouto (BARBA) - Gama Experience #4	 
       </div>
     </div>
