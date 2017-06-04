@@ -176,7 +176,7 @@ function SomenteNumero(event) {
         return false;
 }
 
-$('#date_bornN').on('change', function (e) {
+/*$('#date_bornN').on('change', function (e) {
 
     //var dia = document.getElementById('date_born').value;
     var mes = document.getElementById('date_bornN').value;
@@ -237,4 +237,4 @@ $("#date_failN").keypress(function (e) {
     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
         return false;
     }
-});
+});*/

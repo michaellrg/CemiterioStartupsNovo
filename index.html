@@ -285,12 +285,12 @@
             <div class="input-field col s12">
                 <textarea ng-required="true" ng-minlength="20"
        ng-maxlength="250" ng-model="pitch" type="text" class="validate materialize-textarea" placeholder="Digite o pitch..."></textarea>
-                <label for="pitch">Pitch</label>
+                <label for="pitch">Pitch (Mínimo:20 caracteres)</label>
             </div>
 			<div class="input-field col s12">
                 <label for="problem">Motivo</label>
 				<br><br>
-              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" ng-required="true">
+              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" ng-required="false">
 			  <option ng-repeat="d in problems | orderBy:'nproblem'|  filter:{nproblem:'!N/A'}" value="{{d.id}}">{{d.nproblem}}</option>
 			</select>
 			
@@ -299,7 +299,7 @@
             <div class="input-field col s6">
                 <label for="dcity">Cidade</label>
                 <br><br>
-                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" ng-required="true">
+                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" ng-required="false">
 			 
 			</select>
                 
@@ -307,7 +307,7 @@
             <div class="input-field col s6">
                 <label for="stateUF">Estado</label>
                 <br><br>
-                <select class="browser-default" name="state" id ="stateUF" ng-model="state" ng-required="true">
+                <select class="browser-default" name="state" id ="stateUF" ng-model="state" ng-required="false">
 			 
 			</select>
                 
@@ -317,20 +317,20 @@
                 <textarea ng-model="info" ng-required="true"
        ng-minlength="20"
        ng-maxlength="250" type="text" class="validate materialize-textarea" placeholder="Digite o Quote..."></textarea>
-                <label for="info">Quote </label>
+                <label for="info">Quote (Mínimo: 20 caracteres) </label>
             </div>
 
             <div class="input-field col s6">
-                <label for="date_born">Data de Início</label>
+                <label for="date_born">Data de Início (MM/AAAA)</label>
                 <br><br>
-                <input ng-model="date_born" ng-required="true" id = "date_bornN" ng-minlength="7" ng-maxlength="7" type="string" class="js-mask-mesano text-field" placeholder="Digite o Nascimento..." ></input>
+                <input ng-model="date_born" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id = "date_bornN"  type="string" class="text-field validate" placeholder="Digite o Início..." ></input>
                 
             </div>
             <div class="input-field col s6">
-                <label for="date_fail">Data de Fail</label>
+                <label for="date_fail">Data de Fail (MM/AAAA)</label>
                 <br><br>
-                <input ng-model="date_fail"ng-required="true" id = "date_failN" ng-minlength="7" ng-maxlength="7" type="string" class="js-mask-mesano text-field" placeholder="Digite a falência..." ></input>
-                
+                <input ng-model="date_fail" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id = "date_failN"  type="string" class="text-field validate" placeholder="Digite a Fail..." ></input>
+                              
             </div>
             <div class="input-field col s12">
                 <input ng-model="investiment" ng-required="true"
@@ -351,7 +351,7 @@
                 <label for="url_founder">URL Fundador</label>
             </div>
             <div class="input-field col s12">
-                <a id="btn-create-startup" ng-disabled="myForm.$invalid"class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
+                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid" class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
  
                 <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
  
