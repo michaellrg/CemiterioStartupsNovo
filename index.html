@@ -1,67 +1,72 @@
-<html lang="pt-br">
 
+<html lang="pt-br">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <title>Cemitério de Startups</title>
 
   <!-- CSS  -->
+
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
+<script>
+
+</script>
   <style>
-    .pagination>.active>a,
-    .pagination>.active>span,
-    .pagination>.active>a:hover,
-    .pagination>.active>span:hover,
-    .pagination>.active>a:focus,
-    .pagination>.active>span:focus {
-      background-color: #26a69a;
-      /* <!--background color of buttons. Blue by default--><!--border-color: your color;
-      color or borders. Also blue by default-->color: #ffffff;
-      <!-- text color of buttons which is white by default--> */
-      cursor: pointer;
-      z-index: 2;
-    }
+  a:link {
+    color: #FFFFFF;
+  }
 
-    .dark {
-      background: #1f0242;
-    }
+  .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #26a69a;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 2;
+}
 
-    .brand-logo {
-      margin-top: 6px;
-      width: 140px;
-    }
+  .dark{
 
-    .icon-block .material-icons {
-      font-size: inherit;
-      color: #1f0242;
-    }
+  background:#1f0242;
 
-    .text-field {
-      background-color: transparent;
-      border: none;
-      border-bottom: 1px solid #9e9e9e;
-      border-radius: 0;
-      outline: none;
-      height: 3rem;
-      width: 100%;
-      font-size: 1rem;
-      margin: 0 0 20px 0;
-      padding: 0;
-      box-shadow: none;
-      box-sizing: content-box;
-      transition: all 0.3s;
-    }
+  }
+
+  .brand-logo{
+
+	margin-top:6px;
+	width:140px;
+
+  }
+
+  .icon-block .material-icons {
+    font-size: inherit;
+    color: #1f0242;
+}
+
+.text-field{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    margin: 0 0 20px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
+
   </style>
 </head>
-
-<body ng-app="myApp" ng-controller="mainCtrl">
+<body ng-app="myApp"  ng-controller="mainCtrl">
   <nav class="dark" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><img src="assets/img/logo.png" style="width:100%;"></img></a>
-      <!-- <ul class="right hide-on-med-and-down">
+     <!-- <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
 
@@ -84,10 +89,12 @@
           <a href="#container" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Vamos Começar!</a>
         </div>
         <br><br>
+
       </div>
     </div>
-    <div class="parallax"><img src="assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="../assets/img/background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
+
 
   <div class="container" id="container">
     <div class="section">
@@ -121,7 +128,7 @@
           </div>
         </div>
 
-        <div class="col s12 m3" ng-init="totalInvestiment()">
+		 <div class="col s12 m3" ng-init="totalInvestiment()">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">trending_up</i></h2>
             <h5 class="center">{{total_investiment| currency:"R$ "}}</h5>
@@ -130,327 +137,396 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
+
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Procure por uma Startup logo abaixo!<br><b>Ou se você conhece uma que faliu e não se encontra aqui, adicione!</b></h5>
+          <h5 class="header col s12 light">Procure por uma Startup logo abaixo!<br><b>Ou se você conhece uma que faliu e não se encontra aqui, adicione</b></h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
+    <div class="parallax"><img src="../assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
 
-  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+    <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+
+  </div>
 
   <div class="container">
     <div class="section">
+
       <div class="row">
         <div class="col s12 center">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="search" ng-model="search" type="text" class="search">
-                  <label for="search" data-error="wrong" data-success="right">Procurar Startup</label>
-                </div>
-              </div>
-            </form>
-          </div>
+           <div class="row">
+			<form class="col s12">
+			  <div class="row">
+				<div class="input-field col s12">
+				  <input id="search" ng-model="search" type="text" class="search">
+				  <label for="search" data-error="wrong" data-success="right">Procurar Startup</label>
+				</div>
+			  </div>
+			</form>
+		  </div>
         </div>
       </div>
+
     </div>
   </div>
 
-  <div ng-app="myApp" ng-init="mySwitch=true" ng-controller="mainCtrl" class="col s12 center" style="margin-bottom: 3%;">
-    <a class="btn-large waves-effect waves-light teal lighten-1" data-target="modal-startup-form" modal ng-click="showCreateFormStartup()">Adicionar Startup</a>
-    <a class="btn-large waves-effect waves-light teal lighten-1 " href="" disabled="disabled">Reportar erro</a>
+  <div  ng-app="myApp"  ng-init="mySwitch=true" ng-controller="mainCtrl" class="col s12 center" style="margin-bottom: 3%;">
+
+<a class="btn-large waves-effect waves-light teal lighten-1" data-target="modal-startup-form" modal ng-click="showCreateFormStartup()" >Adicionar Startup</a>
+<a class="btn-large waves-effect waves-light teal lighten-1" data-target="modal-report-error-form" modal ng-click="showCreateFormReportError()" >Reportar erro</a>
   </div>
 
-  <div ng-app="myApp" ng-controller="mainCtrl" class="row">
-    <div id="modal-startup-detail" class="modal">
 
-      <!--Modal Detail-->
-      <div class="modal-content">
+
+  <div ng-app="myApp"  ng-controller="mainCtrl" class="row">
+
+  <div id="modal-startup-detail" class="modal">
+<!--Modal Detail-->
+    <div class="modal-content">
         <h4 id="modal-startup-title-detail">Detalhes Startup</h4>
         <div class="row">
-          <div class="input-field col s8">
-            <label for="name">Nome Startup</label>
-            <br>
+            <div class="input-field col s8">
+                 <label for="name">Nome Startup</label>
+                 <br>
             <p id="name">
-              {{name}}
-            </p>
-          </div>
+			{{name}}
+			</p>
+			</div>
+            <div class="input-field col s4">
+                 <label for="name_problem">Motivo</label>
 
-          <div class="input-field col s4">
-            <label for="name_problem">Motivo</label>
-            <br>
+                 <br>
             <p id="name_problem">
-              {{name_problem}}
-            </p>
-          </div>
+			{{name_problem}}
+			</p>
+			</div>
+            <div class="input-field col s12">
 
-          <div class="input-field col s12">
-            <label for="pitch">Pitch</label>
-            <br>
-            <p id="pitch">
-              {{pitch}}</p>
-          </div>
+                <label for="pitch">Pitch</label>
+				<br>
+                <p id="pitch">
+				{{pitch}}</p>
+            </div>
+            <div class="input-field col s6">
+                <label for="city">Cidade</label>
+                <br>
+                <p id="city">
+				{{city}}</p>
 
-          <div class="input-field col s6">
-            <label for="city">Cidade</label>
-            <br>
-            <p id="city">
-              {{city}}</p>
-          </div>
-          <div class="input-field col s6">
-            <label for="state">Estado</label>
-            <br>
-            <p id="state">
-              {{state}}</p>
-          </div>
+            </div>
+            <div class="input-field col s6">
+                <label for="state">Estado</label>
+                <br>
+                <p id="state">
+				{{state}}</p>
 
-          <div class="input-field col s12">
-            <label for="info">Quote </label>
-            <br>
-            <p id="info">
-              {{info}}
-            </p>
-          </div>
+            </div>
+            <div class="input-field col s12">
+             <label for="info">Quote </label>
+			 <br>
+             <p id="info">
+			 {{info}}
+			 </p>
+            </div>
 
-          <div class="input-field col s6">
-            <label for="date_born">Início</label>
-            <br>
-            <p id="date_born">
-              {{date_born}}</p>
-          </div>
-
-          <div class="input-field col s6">
-            <label for="date_fail">Falha</label>
+            <div class="input-field col s6">
+                <label for="date_born">Início</label>
+                <br>
+                <p id="date_born">
+				{{date_born}}</p>
+            </div>
+            <div class="input-field col s6">
+                <label for="date_fail">Falha</label>
             <br>
             <p id="date_fail">
-              {{date_fail}}</p>
-          </div>
+			{{date_fail}}</p>
 
-          <div class="input-field col s12">
-            <label for="investiment">Investimento</label>
-            <br>
-            <p id="investiment">
-              {{investiment}}</p>
-          </div>
+            </div>
+            <div class="input-field col s12">
+                <label for="investiment">Investimento</label>
+			<br>
+            <p id ="investiment">
+			{{investiment}}</p>
+				</div>
+            <div class="input-field col s12">
+                <label for="name_founder">Nome Fundador</label>
+				<br>
+                <p id="name_founder">
+				{{name_founder}}
+				</p>
+            </div>
+            <div class="input-field col s12">
+                <label for="url_founder">URL Fundador</label>
+				<br>
+                <p id="url_founder">
+				{{url_founder}}
+				</p>
+				</div>
+            <div class="input-field col s12">
 
-          <div class="input-field col s12">
-            <label for="name_founder">Nome Fundador</label>
-            <br>
-            <p id="name_founder">
-              {{name_founder}}
-            </p>
-          </div>
-
-          <div class="input-field col s12">
-            <label for="url_founder">URL Fundador</label>
-            <br>
-            <p id="url_founder">
-              {{url_founder}}
-            </p>
-          </div>
-
-          <div class="input-field col s12">
-            <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em">
-              <i class="material-icons left">close</i>Fechar</a>
-          </div>
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="modal-startup-form" ng-app="myApp" ng-controller="mainCtrl" class="modal">
-      <form name="myForm" novalidate>
+
+<div id="modal-startup-form" ng-app="myApp"  ng-controller="mainCtrl" class="modal">
+<form name="myForm" novalidate>
+    <div class="modal-content">
+        <h4 id="modal-startup-title">Criar Nova Startup</h4>
+        <div class="row">
+            <div class="input-field col s12">
+                <input ng-model="name" ng-minlength="2"
+       ng-maxlength="30" type="text" class="validate" id="form-name" placeholder="Digite o  nome ..." />
+                <label for="name">Nome Startup </label>
+            </div>
+            <div class="input-field col s12">
+                <textarea ng-required="true" ng-minlength="20"
+       ng-maxlength="250" ng-model="pitch" type="text" class="validate materialize-textarea" placeholder="Digite o pitch..."></textarea>
+                <label for="pitch">Pitch (Mínimo:20 caracteres)</label>
+            </div>
+			<div class="input-field col s12">
+                <label for="problem">Motivo</label>
+				<br><br>
+              <select class="browser-default" name="problem" id ="problem" ng-init="getAllProblem()" ng-required="false">
+			  <option ng-repeat="d in problems | orderBy:'nproblem'|  filter:{nproblem:'!N/A'}" value="{{d.id}}">{{d.nproblem}}</option>
+			</select>
+
+
+            </div>
+            <div class="input-field col s6">
+                <label for="dcity">Cidade</label>
+                <br><br>
+                <select class="browser-default" name="dcity" id ="dcity" ng-model="city" ng-required="false">
+
+			</select>
+
+            </div>
+            <div class="input-field col s6">
+                <label for="stateUF">Estado</label>
+                <br><br>
+                <select class="browser-default" name="state" id ="stateUF" ng-model="state" ng-required="false">
+
+			</select>
+
+
+            </div>
+            <div class="input-field col s12">
+                <textarea ng-model="info" ng-required="true"
+       ng-minlength="20"
+       ng-maxlength="250" type="text" class="validate materialize-textarea" placeholder="Digite o Quote..."></textarea>
+                <label for="info">Quote (Mínimo: 20 caracteres) </label>
+            </div>
+
+            <div class="input-field col s6">
+                <label for="date_born">Data de Início (MM/AAAA)</label>
+                <br><br>
+                <input ng-model="date_born" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id = "date_bornN"  type="string" class="text-field validate" placeholder="Digite o Início..." ></input>
+
+            </div>
+            <div class="input-field col s6">
+                <label for="date_fail">Data de Fail (MM/AAAA)</label>
+                <br><br>
+                <input ng-model="date_fail" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id = "date_failN"  type="string" class="text-field validate" placeholder="Digite a Fail..." ></input>
+
+            </div>
+            <div class="input-field col s12">
+                <input ng-model="investiment" ng-required="true"
+       ng-minlength="1"
+        type="number" class="validate" id="investiment" placeholder="Digite o investimento..." />
+                <label for="investiment">Investimento</label>
+            </div>
+            <div class="input-field col s12">
+                <input ng-required="true"
+       ng-minlength="3"
+       ng-maxlength="80" ng-model="name_founder" type="text" class="validate" id="name_founder" placeholder="Digite o nome do fundador..." />
+                <label for="name_founder">Nome do Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <input  ng-required="false"
+       ng-minlength="15"
+       ng-maxlength="30" ng-model="url_founder" type="url" class="validate" id="url_founder" placeholder="Digite a URL do fundador..." />
+                <label for="url_founder">URL Fundador</label>
+            </div>
+            <div class="input-field col s12">
+                <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid" class="waves-effect waves-light btn margin-bottom-1em" ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
+
+                <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
+
+                <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
+            </div>
+        </div>
+    </div>
+	</form>
+</div>
+<!--Início Modal de Report Error-->
+<div id="modal-report-error-form" ng-app="myApp" ng-controller="mainCtrl" class="modal">
+      <form name="form-report-error" novalidate>
         <div class="modal-content">
-          <h4 id="modal-startup-title">Criar Nova Startup</h4>
+          <h4 id="modal-report-error-title">Reportar Erro</h4>
           <div class="row">
 
             <div class="input-field col s12">
-              <input ng-model="name" ng-minlength="2" ng-maxlength="30" type="text" class="validate" id="form-name" placeholder="Digite o  nome ..."
-              />
-              <label for="name">Nome Startup </label>
+              <input ng-model="report_error_email" ng-minlength="1" ng-maxlength="60" type="email" class="validate" id="report_error_email" placeholder="seuemail@email.com"/>
+              <label for="report_error_email">E-mail</label>
             </div>
 
+            <br><br>
             <div class="input-field col s12">
-              <textarea ng-required="true" ng-minlength="20" ng-maxlength="250" ng-model="pitch" type="text" class="validate materialize-textarea"
-                placeholder="Digite o pitch..."></textarea>
-              <label for="pitch">Pitch (Mínimo:20 caracteres)</label>
+              <textarea ng-required="true" ng-minlength="10" ng-maxlength="250" ng-model="report_error_more_info" id="report_error_more_info" type="text" class="validate materialize-textarea"
+                placeholder="Especifique as informações do erro..."></textarea>
+              <label for="report_error_more_info">Informações do erro</label>
             </div>
 
+            <br><br>
             <div class="input-field col s12">
-              <label for="problem">Motivo</label>
+                <input ng-model="report_error_is_bug" type="checkbox" id="report_error_is_bug" />
+                <label for="report_error_is_bug">Marque se o erro encontrado é um bug</label>
+            </div>
+
+            <div ng-hide="report_error_is_bug" class="input-field col s12">
               <br><br>
-              <select class="browser-default" name="problem" id="problem" ng-init="getAllProblem()" ng-required="false">
-			          <option ng-repeat="d in problems | orderBy:'nproblem'|  filter:{nproblem:'!N/A'}" value="{{d.id}}">{{d.nproblem}}</option>
+              <label for="report_error_startup">Startup</label>
+              <br><br>
+              <select class="browser-default" ng-model="report_error_startup" name="report_error_startup" id="report_error_startup" ng-init="getAllStartup()" ng-required="false">
+			          <option ng-repeat="d in names | orderBy:'name' | filter:{name:'!null'}" value="{{d.id}}">{{d.name}}</option>
 			        </select>
             </div>
 
-            <div class="input-field col s6">
-              <label for="dcity">Cidade</label>
-              <br><br>
-              <select class="browser-default" name="dcity" id="dcity" ng-model="city" ng-required="false">
-              </select>
-            </div>
-
-            <div class="input-field col s6">
-              <label for="stateUF">Estado</label>
-              <br><br>
-              <select class="browser-default" name="state" id="stateUF" ng-model="state" ng-required="false">
-              </select>
-            </div>
-
+            <br><br>
             <div class="input-field col s12">
-              <textarea ng-model="info" ng-required="true" ng-minlength="20" ng-maxlength="250" type="text" class="validate materialize-textarea"
-                placeholder="Digite o Quote..."></textarea>
-              <label for="info">Quote (Mínimo: 20 caracteres) </label>
-            </div>
-
-            <div class="input-field col s6">
-              <label for="date_born">Data de Início (MM/AAAA)</label>
-              <br><br>
-              <input ng-model="date_born" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id="date_bornN" type="string"
-                class="text-field validate" placeholder="Digite o Início..."></input>
-            </div>
-
-            <div class="input-field col s6">
-              <label for="date_fail">Data de Fail (MM/AAAA)</label>
-              <br><br>
-              <input ng-model="date_fail" ng-pattern='/^(0?[1-9]|1[012])\/(199\d)|([2-9]\d{3})$/' ng-required="true" id="date_failN" type="string"
-                class="text-field validate" placeholder="Digite a Fail..."></input>
-            </div>
-
-            <div class="input-field col s12">
-              <input ng-model="investiment" ng-required="true" ng-minlength="1" type="number" class="validate" id="investiment" placeholder="Digite o investimento..."
-              />
-              <label for="investiment">Investimento</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input ng-required="true" ng-minlength="3" ng-maxlength="80" ng-model="name_founder" type="text" class="validate" id="name_founder"
-                placeholder="Digite o nome do fundador..." />
-              <label for="name_founder">Nome do Fundador</label>
-            </div>
-
-            <div class="input-field col s12">
-              <input ng-required="false" ng-minlength="15" ng-maxlength="30" ng-model="url_founder" type="url" class="validate" id="url_founder"
-                placeholder="Digite a URL do fundador..." />
-              <label for="url_founder">URL Fundador</label>
-            </div>
-
-            <div class="input-field col s12">
-              <a id="btn-create-startup" ng-disabled="myForm.$pristine|| myForm.$invalid" class="waves-effect waves-light btn margin-bottom-1em"
-                ng-click="createStartup()"><i class="material-icons left">add</i>Criar</a>
-
-              <!--<a id="btn-update-startup" class="waves-effect waves-light btn margin-bottom-1em" ng-click="updateStartup()"><i class="material-icons left">edit</i>Save Changes</a>-->
-
+              <a id="btn-create-report-error" ng-disabled="form-report-error.$pristine|| form-report-error.$invalid" class="waves-effect waves-light btn margin-bottom-1em"
+                ng-click="createReportError()"><i class="material-icons left">send</i>Enviar</a>
               <a class="modal-action modal-close waves-effect waves-light btn margin-bottom-1em"><i class="material-icons left">close</i>Fechar</a>
             </div>
-            
+
           </div>
         </div>
       </form>
     </div>
+<!--Fim Modal de Report Error-->
 
-    <table class="hoverable bordered">
-      <thead>
-        <tr>
-          <th class="visible-md visible-lg">#</th>
-          <!-- <th>Inclusão</th> -->
-          <th class="visible-xs visible-sm visible-md visible-lg">Startup</th>
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Pitch</th>
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Cidade</th>
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">UF</th>
-          <th class="visible-xs visible-sm visible-md visible-lg">Motivo</th>
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Quote do empreendedor</th>
+ <table class="hoverable bordered">
 
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Data do Fail</th>
-          <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Investimento</th>
-          <th class="visible-xs visible-sm visible-md visible-lg">Fundador</th>
-        </tr>
-      </thead>
-      <tbody ng-init="getAllStartup()">
+ <thead>
+                  <tr>
+                    <th class="visible-md visible-lg">#</th>
+                    <!-- <th>Inclusão</th> -->
+                    <th class="visible-xs visible-sm visible-md visible-lg">Startup</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Pitch</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Cidade</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">UF</th>
+                    <th class="visible-xs visible-sm visible-md visible-lg">Motivo</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Quote do empreendedor</th>
+
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Data do Fail</th>
+                    <th class="hide-on-small-only hide-on-med-only hide-on-med-and-down">Investimento</th>
+                    <th class="visible-xs visible-sm visible-md visible-lg">Fundador</th>
+                  </tr>
+                </thead>
+                <tbody ng-init="getAllStartup()">
         <tr dir-paginate="d in names | filter:search | orderBy:sortKey:reverse | itemsPerPage:20" pagination-id="cemiterio">
-          <td data-title="#" class="visible-md visible-lg text-align-center">{{ d.id }}</td>
-          <td data-title="Startup" class="visible-xs visible-sm visible-md visible-lg text-align-center"><a class="waves-effect waves-light btn purple darken-4" href="" data-target="modal-startup-detail" modal ng-click="readOneStartup(d.id)"> {{d.name }}</a></td>
-          <td data-title="Pitch" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.pitch |strLimit:100 }}</td>
-          <td data-title="Cidade" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.city }}</td>
-          <td data-title="UF" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.state }}</td>
-          <td data-title="Motivo" class="text-align-center visible-xs visible-sm visible-md visible-lg">{{ d.name_problem }}</td>
-          <td data-title="Quote" class="hide-on-small-only hide-on-med-only hide-on-med-and-down"> {{ d.info |strLimit:100 }}</td>
+            <td data-title="#" class="visible-md visible-lg text-align-center">{{ d.id }}</td>
+            <td data-title="Startup" class="visible-xs visible-sm visible-md visible-lg text-align-center"><a class="waves-effect waves-light btn purple darken-4" href=""  data-target="modal-startup-detail" modal ng-click="readOneStartup(d.id)"> {{d.name }}</a></td>
+            <td data-title="Pitch" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.pitch |strLimit:100 }}</td>
+            <td data-title="Cidade" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.city }}</td>
+            <td data-title="UF" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.state }}</td>
+            <td data-title="Motivo" class="text-align-center visible-xs visible-sm visible-md visible-lg">{{ d.name_problem }}</td>
+            <td data-title="Quote" class="hide-on-small-only hide-on-med-only hide-on-med-and-down"> {{ d.info |strLimit:100 }}</td>
 
-          <td data-title="Data do Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
-          <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment | currency:"R$ "}}</td>
-          <td data-title="Fundador" class="visible-xs visible-sm visible-md visible-lg text-align-center"> <a class="waves-effect waves-light btn purple darken-4" href="{{ d.url_founder }}">{{d.name_founder}}</a> </td>
+             <td data-title="Data do Fail" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.date_fail }}</td>
+             <td data-title="Investimento" class="hide-on-small-only hide-on-med-only hide-on-med-and-down">{{ d.investiment | currency:"R$ "}}</td>
+             <td data-title="Fundador" class="visible-xs visible-sm visible-md visible-lg text-align-center"> <a class="waves-effect waves-light btn purple darken-4" href="{{ d.url_founder }}">{{d.name_founder}}</a>     </td>
         </tr>
-      </tbody>
-    </table>
 
-    <!-- angular pagination -->
-    <dir-pagination-controls pagination-id="cemiterio" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)"
-      template-url="app/shared/dir_pagination.tpl.html"></dir-pagination-controls>
+    </tbody>
+
+
+</table>
+<!-- angular pagination -->
+
+<dir-pagination-controls pagination-id="cemiterio" boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="app/shared/dir_pagination.tpl.html"></dir-pagination-controls>
 
   </div>
 
   <div id="news-cemiterio-de-startups-19953e32e018d4660bbf"></div>
 
   <footer class="page-footer teal">
+
     <div class="footer-copyright">
       <div class="container">
-
-        © 2017 - Made with ❤ by &nbsp; &nbsp; <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%"></a>        ©
-        <br><br> Developers: <a href ="https://www.linkedin.com/in/bruno-andrade-santos-67565711b/">Bruno Andrade Santos</a>, <a href ="https://www.linkedin.com/in/michaellrg/">Michaell Reis Gasparini</a>, <a href ="https://www.linkedin.com/in/victormarcorin/">Victor Angelo Marcorin</a>, <a href ="https://www.linkedin.com/in/vitorsavedra/">Vitor Savedra</a>, <a href ="https://www.linkedin.com/in/wesley-tavares/">Wesley Tavares</a> - Gama Experience
-        #2
-        <br> Designer: <a href ="https://www.linkedin.com/in/bruno-mescouto-002bb326/ ">Bruno A L Mescouto (BARBA) - Gama Experience #4</a>
+        © 2017 - Made with ❤ by &nbsp; &nbsp;    <a href="http://gama.academy/"><img src="assets/img/gama.png" width="10%"></a> ©
+        <br><br>
+        Developers:
+        <a href ="https://www.linkedin.com/in/bruno-andrade-santos-67565711b/">Bruno Andrade Santos</a>,
+        <a href ="https://www.linkedin.com/in/michaellrg/">Michaell Reis Gasparini</a>,
+        <a href ="https://www.linkedin.com/in/victormarcorin/">Victor Angelo Marcorin</a>,
+        <a href ="https://www.linkedin.com/in/vitorsavedra/">Vitor Savedra</a>,
+        <a href ="https://www.linkedin.com/in/wesley-tavares/">Wesley Tavares</a> - Gama Experience #2
+        <br>
+        Designer:
+        <a href ="https://www.linkedin.com/in/bruno-mescouto-002bb326/ ">Bruno A L Mescouto (BARBA)</a> - Gama Experience #4
       </div>
     </div>
   </footer>
 
 
+
+
   <!--  Scripts-->
-  <!-- Include Angular JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
-  
-  <!-- Include JQuery -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-  <!-- Include angular pagination -->
-  <script src="assets/js/dirPagination.js"></script>
 
-  <!-- Material Design JS -->
-  <!-- <script type="text/javascript" src="assets/js/materialize.min.js"></script> -->
+<!-- include angular js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.6.4/angular-locale_pt-br.min.js"></script>
+  <!-- include jquery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+ <!-- include angular pagination -->
+<script src="../assets/js/dirPagination.js"></script>
 
-  <!--Custom JS -->
-  <script type="text/javascript" src="assets/js/custom.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
-  <script type="text/javascript" src="assets/js/jquery.maskedinput.js"></script>
-  <script type="text/javascript" src="assets/js/maskedinput-binder.js"></script>
-  <script type="text/javascript" src="assets/js/masks.js"></script>
-  <script type="text/javascript" src="assets/js/validadores.js"></script>
 
-  <!--App -->
-  <script type="text/javascript" src="app/app.js"></script>
-  <script src="assets/js/init.js"></script>
+
+<!-- material design js -->
+<script type="text/javascript" src="../assets/js/materialize.min.js"></script>
+
+<!-- custom js -->
+<script type="text/javascript" src="../assets/js/custom.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.7/mask.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+<script type="text/javascript" src="../assets/js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="../assets/js/maskedinput-binder.js"></script>
+<script type="text/javascript" src="../assets/js/masks.js"></script>
+ <script type="text/javascript" src="../assets/js/validadores.js"></script>
+<!-- app -->
+<script type="text/javascript" src="/app/app.js"></script>
+  <script src="../assets/js/init.js"></script>
   <script>
-    $(document).ready(function () {
-      // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-      $('.modal').modal();
-    });
-  </script>
 
+	$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+
+    // $('#report_error_startup').on('change', function() {
+    //   var report_error_startup = $(this).find(":selected").val();
+    //   // var report_error_startup = $("#report_error_startup option:selected").text();
+    //   $('#report_error_startup_name').text(report_error_startup);
+    // })
+
+  });
+
+  </script>
   <!-- RD Station -->
   <script type="text/javascript">
     new RDStationForms('news-cemiterio-de-startups-19953e32e018d4660bbf-html', 'UA-75901769-1').createForm();
   </script>
-
-</body>
-
+  </body>
 </html>

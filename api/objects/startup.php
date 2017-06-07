@@ -36,7 +36,7 @@ class Startup{
                 " . $this->table_name . "
             SET 
                 name_startup=:name_startup,pitch=:pitch ,city=:city, state=:state, id_problem=:id_problem, more_info=:more_info, 
-                name_founder=:name_founder, url_founder=:url_founder, date_born=:date_born, date_fail=:date_fail, investiment=:investiment";
+                name_founder=:name_founder, url_founder=:url_founder, date_born=:date_born, date_fail=:date_fail, investiment=:investiment, id_status_startup=1";
      
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -90,6 +90,7 @@ function readAll(){
                 JOIN problem
                 ON ".$this->table_name.
             ".id_problem = problem.id
+            WHERE id_status_startup = 1
             ORDER BY
                 startup.id";
  
@@ -224,7 +225,7 @@ function delete(){
 function totalStartup(){
  
     // select total query
-    $query = "SELECT id, COUNT( * ) as n FROM " . $this->table_name;
+    $query = "SELECT id, COUNT( * ) as n FROM " . $this->table_name . "WHERE id_status_startup = 1";
  
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -242,7 +243,7 @@ function totalStartup(){
 
 function moreCity(){
     // select total query
-    $query = "SELECT city, COUNT( * ) n FROM ". $this->table_name." WHERE city IS NOT NULL GROUP BY city ORDER BY n DESC LIMIT 1 " ;
+    $query = "SELECT city, COUNT( * ) n FROM ". $this->table_name." WHERE city IS NOT NULL AND id_status_startup = 1 GROUP BY city ORDER BY n DESC LIMIT 1 " ;
  
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -261,7 +262,7 @@ function moreCity(){
 function moreProblem(){
     // select total query
     $query = "SELECT problem.name_problem, COUNT( * ) as n FROM ". $this->table_name." JOIN problem
-                ON ". $this->table_name.".id_problem=problem.id WHERE `id_problem` != 6 GROUP BY `id_problem` ORDER BY n DESC LIMIT 1" ;
+                ON ". $this->table_name.".id_problem=problem.id WHERE `id_problem` != 6 AND id_status_startup = ' GROUP BY `id_problem` ORDER BY n DESC LIMIT 1" ;
  
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -280,7 +281,7 @@ function moreProblem(){
 
 function totalInvestiment(){
     // select total query
-    $query = "SELECT SUM(investiment) FROM ". $this->table_name;
+    $query = "SELECT SUM(investiment) FROM ". $this->table_name . "WHERE id_status_startup = 1";
  
     // prepare query
     $stmt = $this->conn->prepare($query);

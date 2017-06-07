@@ -409,5 +409,58 @@ $scope.totalInvestiment= function(id){
 }
 
 
+/*This starts the Report Error functions*/
+
+
+$scope.showCreateFormReportError = function(){
+ 
+    // clear form
+    $scope.clearFormReportError();
+ 
+    // change modal title
+    $('#modal-report-error-title').text("Reportar erro");
+ 
+    // hide update report-error button
+    $('#btn-update-report-error').hide();
+ 
+    // show create report-error button
+    $('#btn-create-report-error').show();
+
+}
+
+// clear variable / form values
+$scope.clearFormReportError = function(){
+    $scope.report_error_is_bug = "";
+    $scope.report_error_startup = "";
+    $scope.report_error_more_info = "";
+    $scope.report_error_email = "";
+}
+
+// create new startup
+$scope.createReportError = function(){
+ 
+    $http({
+        method: 'POST',
+        data: {
+                'is_bug':$scope.report_error_is_bug,
+                'id_startup':$scope.report_error_startup,
+                'more_info':$scope.report_error_more_info,
+                'email':$scope.report_error_email,
+                'startup_name':$scope.report_error_startup_name
+        },
+        url: 'api/report-error/create.php'
+    }).then(function successCallback(response) {
+ 
+        // tell the user new startup was created
+        Materialize.toast(response.data, 4000);
+ 
+        // close modal
+        $('#modal-report-error-form').modal('close');
+ 
+        // clear modal content
+        $scope.clearFormReportError();
+     });
+}
+
 
 });
