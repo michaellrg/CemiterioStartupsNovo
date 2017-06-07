@@ -225,7 +225,7 @@ function delete(){
 function totalStartup(){
  
     // select total query
-    $query = "SELECT id, COUNT( * ) as n FROM " . $this->table_name . "WHERE id_status_startup = 1";
+    $query = "SELECT id, COUNT( * ) as n FROM " . $this->table_name . " WHERE id_status_startup = 1";
  
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -262,7 +262,7 @@ function moreCity(){
 function moreProblem(){
     // select total query
     $query = "SELECT problem.name_problem, COUNT( * ) as n FROM ". $this->table_name." JOIN problem
-                ON ". $this->table_name.".id_problem=problem.id WHERE `id_problem` != 6 AND id_status_startup = ' GROUP BY `id_problem` ORDER BY n DESC LIMIT 1" ;
+                ON ". $this->table_name.".id_problem=problem.id WHERE `id_problem` != 6 AND id_status_startup = 1 ' GROUP BY `id_problem` ORDER BY n DESC LIMIT 1" ;
  
     // prepare query
     $stmt = $this->conn->prepare($query);
@@ -281,7 +281,7 @@ function moreProblem(){
 
 function totalInvestiment(){
     // select total query
-    $query = "SELECT SUM(investiment) FROM ". $this->table_name . "WHERE id_status_startup = 1";
+    $query = "SELECT SUM(investiment) FROM ". $this->table_name . " WHERE id_status_startup = 1";
  
     // prepare query
     $stmt = $this->conn->prepare($query);
