@@ -36,7 +36,7 @@ class Startup{
                 " . $this->table_name . "
             SET 
                 name_startup=:name_startup,pitch=:pitch ,city=:city, state=:state, id_problem=:id_problem, more_info=:more_info, 
-                name_founder=:name_founder, url_founder=:url_founder, date_born=:date_born, date_fail=:date_fail, investiment=:investiment, id_status_startup=1";
+                name_founder=:name_founder, url_founder=:url_founder, date_born=:date_born, date_fail=:date_fail, investiment=:investiment, id_status_startup=2";
      
     // prepare query
     $stmt = $this->conn->prepare($query);
